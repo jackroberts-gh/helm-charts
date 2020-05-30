@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "fullname" . }}-http
+  labels:
+    app: {{ template "fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+  annotations:
+{{ toYaml .Values.service.https.svc_annotations | indent 4 }}
+spec:
+  type: {{ .Values.service.https.serviceType }}
+  {{- if (.Values.service.https.loadBalancerIP) and eq .Values.service.https.serviceType "LoadBalancer" }}
+  loadBalancerIP: {{ .Values.service.https.loadBalancerIP }}
+  {{- end }}
+  ports:
+  - name: https
+    port: {{ .Values.service.https.port }}
+    {{- if  .Values.service.https.nodePort }}
+    nodePort: {{ .Values.service.https.nodePort }}
+    {{- end }}
+    targetPort: {{ .Values.service.https.targetPort }}
+  selector:
+    app: {{ template "fullname" . }}
