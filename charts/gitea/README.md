@@ -1,7 +1,7 @@
 ### k3s/arm compatible
  
 # Helm chart for Gitea. 
-## Tested via deploying in to a k3s RPi4 cluster.
+## Tested via deploying in to a k3s RPi4 cluster!
 
 # Gitea Helm chart
 [Gitea](https://gitea.com/) is a lightweight GitHub clone.  This is for those who wish to self host their own git repos on kubernetes.
