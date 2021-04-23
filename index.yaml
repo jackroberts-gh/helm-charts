@@ -1,0 +1,55 @@
+apiVersion: v1
+entries:
+  drone:
+  - apiVersion: v1
+    appVersion: 1.6.5
+    created: "2021-04-23T13:19:11.773544531Z"
+    description: Drone is a self-service Continuous Delivery platform for busy development
+      teams
+    digest: e3194c959ae8a6d11c9a6424b10c01e2c776e088f34ad9809b7a5091d6ac5b6e
+    home: https://drone.io/
+    icon: https://drone.io/apple-touch-icon.png
+    keywords:
+    - continuous-delivery
+    - continuous-deployment
+    - continuous-integration
+    - docker
+    - drone
+    - drone.io
+    - go
+    kubeVersion: ^1.13.0-0
+    maintainers:
+    - email: hello@drone.io
+      name: Drone
+    name: drone
+    sources:
+    - https://github.com/drone/drone
+    - https://github.com/drone/helm
+    urls:
+    - https://github.com/jzr1991/helm-charts/releases/download/drone-2.0.0/drone-2.0.0.tgz
+    version: 2.0.0
+  gitea:
+  - apiVersion: v1
+    appVersion: 1.11.5
+    created: "2021-04-23T13:19:11.917284593Z"
+    description: Git with a cup of tea
+    digest: 09b2865343f4ddeb5a464ee2b0b8645f3ab2ceb6f8eb4095fac8f61a83736301
+    icon: https://docs.gitea.io/images/gitea.png
+    keywords:
+    - git
+    - issue tracker
+    - code review
+    - wiki
+    - gitea
+    - gogs
+    maintainers:
+    - email: john.felten@gmail.com
+      name: John Felten
+    name: gitea
+    sources:
+    - https://github.com/go-gitea/gitea
+    - https://hub.docker.com/r/gitea/gitea/
+    urls:
+    - https://github.com/jzr1991/helm-charts/releases/download/gitea-2.0.0/gitea-2.0.0.tgz
+    version: 2.0.0
+generated: "2021-04-23T13:19:11.544525188Z"
